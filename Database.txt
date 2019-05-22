@@ -59,3 +59,38 @@ START WITH 1000
 INCREMENT BY 10
 MINVALUE 1000
 NOCYCLE;
+
+//trigger for requestid
+DECLARE
+	auto_id NUMBER;
+BEGIN
+	SELECT REQUESTID_SEQUENCE.nextval INTO auto_id FROM dual;
+	:accountrequest.requestid:=auto_id;
+END;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
